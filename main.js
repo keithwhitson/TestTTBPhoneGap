@@ -7,7 +7,7 @@ function init() {
 
 function deviceIsLoaded(){
 	console.log("everything loaded");
-	//window.requestFileSystem(LocalFileSystem.PERSISTENT,0,gotFS,fail);
+	window.requestFileSystem(LocalFileSystem.PERSISTENT,0,gotFS,fail);
 }
 
 function gotFS(fileSystem){
@@ -24,13 +24,4 @@ function openAfile(){
 	alert("You want to open a file");
 }
 
-function objToString (obj) {
-    var tabjson=[];
-    for (var p in obj) {
-        if (obj.hasOwnProperty(p)) {
-            tabjson.push('"'+p +'"'+ ':' + obj[p]);
-        }
-    }  tabjson.push()
-    return '{'+tabjson.join(',')+'}';
-}
 
