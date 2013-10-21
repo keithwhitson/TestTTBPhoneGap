@@ -21,7 +21,7 @@ function fail(error){
 
 function openAfile(){
 	var fileSystemObject = window.requestFileSystem(LocalFileSystem.PERSISTENT,0,gotFS,fail);
-	alert("You want to open a file");
+	document.getElementById("filemessage").innerText = "You want to open a file";
 }
 
 
